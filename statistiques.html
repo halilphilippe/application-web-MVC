@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Statistiques</title>
+</head>
+<body>
+    <h1>Produit le plus acheté</h1>
+    {% if top %}
+        <p><strong>{{ top }}</strong></p>
+    {% else %}
+        <p>Aucun achat enregistré</p>
+    {% endif %}
+    <a href="/">Retour</a>
+</body>
+</html>
