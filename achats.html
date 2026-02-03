@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajouter un achat</title>
+</head>
+<body>
+    <h1>Ajouter un achat</h1>
+    <form method="POST">
+        <label>Produit :</label>
+        <input type="text" name="produit" required><br><br>
+        <label>Quantité :</label>
+        <input type="number" name="quantite" required><br><br>
+        <button type="submit">Ajouter</button>
+    </form>
+
+    <h2>Achats enregistrés :</h2>
+    <ul>
+        {% for achat in achats %}
+            <li>{{ achat.produit }} - {{ achat.quantite }}</li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="/stats">Voir le produit le plus acheté</a>
+</body>
+</html>
